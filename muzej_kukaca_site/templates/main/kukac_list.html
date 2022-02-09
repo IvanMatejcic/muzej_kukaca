@@ -1,0 +1,22 @@
+{% extends "homepage.html" %}
+{% block content %}
+<br>
+<h2> Kukci </h2>
+<p>Prikaz kolekcije kukaca, interesantnih informacija vezanih uz njih te korisnika 'Muzeja Kukaca' koji su ih ulovili.</p>
+<hr>
+{% for kukac in kukac_list %}
+    <div class="kukac">
+        <h4>Vrsta: {{ kukac.vrsta }}</h4>
+        <h4>Porodica: {{ kukac.porodica }}</h4>
+        <h4>Red: {{ kukac.red }}<h4>
+        <h4>Datum sakupljanja: {{ kukac.datum_sakupljanja }}<h4>
+        <h4>Lokalitet: {{ kukac.lokalitet }}<h4>
+        <h4>Duljina: {{ kukac.duljina }}<h4>
+        <h4>Spol: {{ kukac.spol }}<h4>
+        <h4>Dostupan: {{ kukac.dostupan }}<h4>
+        <h4>Opis: {{ kukac.opis }}<h4>
+        <h4>Lovac: {{ kukac.lovac }}<h4>
+        <hr>
+    </div>
+{% endfor %}
+{% endblock %}

@@ -1,6 +1,13 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.views.generic import ListView
+from main.models import Korisnik, Kukac
+
+class KorisnikList(ListView):
+    model = Korisnik
+
+class KukacList(ListView):
+    model = Kukac
 
 def homepage(request):
-    return HttpResponse('Welcome to homepage! <strong>#samo Muzej kukaca</strong>')
+    return render(request, './homepage.html')
 

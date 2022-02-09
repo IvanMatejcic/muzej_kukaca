@@ -1,0 +1,17 @@
+{% extends "homepage.html" %}
+{% block content %}
+<br>
+<h2> Korisnici </h2>
+<p>Prikaz svih korisnika koji su na 'Muzej Kukaca' objavili kukce koje su ulovili.</p>
+<hr>
+{% for korisnik in korisnik_list %}
+    <div class="korisnik">
+        <h4>Username: {{ korisnik.username }}</h4>
+        <h4>Ime: {{ korisnik.ime }}</h4>
+        <h4>Prezime: {{ korisnik.prezime }}<h4>
+        <h4>E-mail: {{ korisnik.email }}<h4>
+        <br>
+        <hr>
+    </div>
+{% endfor %}
+{% endblock %}
