@@ -21,6 +21,7 @@ class Kukac(models.Model):
     dostupan = models.BooleanField(default = False)
     opis = models.TextField()
     lovac = models.ForeignKey(Korisnik, on_delete = models.CASCADE)
+    slika = models.ImageField(default = '0')
 
     def __str__(self):
         return self.vrsta
