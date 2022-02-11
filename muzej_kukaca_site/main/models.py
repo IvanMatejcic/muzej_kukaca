@@ -5,6 +5,7 @@ class Korisnik(models.Model):
     ime = models.CharField(max_length = 20)
     prezime = models.CharField(max_length = 20)
     email = models.EmailField()
+    slika_profila = models.ImageField(upload_to = 'images/', default = '0')
 
     def __str__(self):
         return self.username
@@ -21,7 +22,7 @@ class Kukac(models.Model):
     dostupan = models.BooleanField(default = False)
     opis = models.TextField()
     lovac = models.ForeignKey(Korisnik, on_delete = models.CASCADE)
-    slika = models.ImageField(default = '0')
+    slika = models.ImageField(upload_to = 'images/')
 
     def __str__(self):
         return self.vrsta

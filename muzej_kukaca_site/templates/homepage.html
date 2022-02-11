@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en"> 
+    
 <head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <title>{% block title %}Muzej Kukaca{% endblock %}</title>
 </head>
 
 <body>
-    <h1>Muzej Kukaca</h1>
-    <div id="sidebar">
+    <div id="sidebar" style = "font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
         {% block sidebar %}
         <ul>
-            <li><a href="/">Početna</a></li>
+            <li><a href="/">MUZEJ KUKACA</a></li>
             <li><a href="/kukacs">Kukci</a></li>
             <li><a href="/korisniks">Korisnici</a></li>
+            <li style = "float: right"><a href="/accounts/login">Log In</a></li>
+
         </ul>
         {% endblock %}
     </div>

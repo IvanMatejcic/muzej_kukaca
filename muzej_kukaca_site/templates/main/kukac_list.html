@@ -1,11 +1,16 @@
 {% extends "homepage.html" %}
 {% block content %}
+
+<br><br>
+
+<div class = "uvod" style="width: 600px; margin:0 auto;">
+    <h1> Kukci </h1>
+    <p>Prikaz kolekcije kukaca, interesantnih informacija vezanih uz njih te korisnika 'Muzeja Kukaca' koji su ih ulovili.</p>
+</div>
 <br>
-<h2> Kukci </h2>
-<p>Prikaz kolekcije kukaca, interesantnih informacija vezanih uz njih te korisnika 'Muzeja Kukaca' koji su ih ulovili.</p>
-<hr>
+<div class = "kukci" style = "width: 600px; margin: 0 auto;">
 {% for kukac in kukac_list %}
-    <div class="kukac">
+    <div class="kukac" style = "width: 600px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
         <h4>Vrsta: {{ kukac.vrsta }}</h4>
         <h4>Porodica: {{ kukac.porodica }}</h4>
         <h4>Red: {{ kukac.red }}<h4>
@@ -16,8 +21,8 @@
         <h4>Dostupan: {{ kukac.dostupan }}<h4>
         <h4>Opis: {{ kukac.opis }}<h4>
         <h4>Lovac: {{ kukac.lovac }}<h4>
-        <h4>{{ kukac.slika }}<h4>
-        <hr>
+        <img src="{{ kukac.slika.url}}" alt="connect" style="max-height:300px">
     </div>
 {% endfor %}
 {% endblock %}
+</div>
