@@ -1,5 +1,6 @@
 from django import forms
 from main.models import Korisnik, Kukac
+
 class KukacForm(forms.ModelForm):
 
     class Meta:
