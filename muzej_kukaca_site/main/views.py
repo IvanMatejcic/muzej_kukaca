@@ -1,7 +1,12 @@
 from django.shortcuts import redirect, render
 from django.views.generic import ListView
-from main.models import Korisnik, Kukac
-from django.contrib.auth import authenticate, login
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.views.generic import DetailView, CreateView, UpdateView, DeleteView
+from django.contrib.auth.decorators import login_required
+from .models import *
+from unittest import result
+from urllib import request
+
 
 
 class KorisnikList(ListView):
@@ -26,3 +31,13 @@ def display_korisnik_images(request):
         Korisniks = Korisnik.objects.all() 
         return render((request, './korisnik_list.html',
                      {'korisnik_list' : Korisniks}))
+
+@login_required
+
+class KukacCreateView(LoginRequiredMixin, CreateView):
+    model = Kukac
+    fields = ['vrsta', 'porodica', 'red', 'datum_sakupljanja', 'lokalitet', 'duljina', 'spol', 'dostupan', 'opis', 'lovac', 'slika']
+
+    def form_valid(self, form):
+        form.instance.lovac = self.request.user
+        return super().form_valid(form) 

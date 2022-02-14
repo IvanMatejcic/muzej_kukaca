@@ -1,0 +1,12 @@
+{% extends "homeopage.html" %}
+{% block content %}
+
+<div class="pt-24 content bg-slate-200">
+    <form method="POST">
+        {% csrf_token %}
+        {{form}}
+        <button type="submit">Post</button>
+    </form>
+</div>
+
+{% endblock content %}

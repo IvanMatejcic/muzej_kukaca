@@ -14,14 +14,16 @@
                 {% if user.is_authenticated %}
                     <ul>
                         <li><a href="/">MUZEJ KUKACA</a></li>
-                        <li><a href="/kukacs">Kukci</a></li>
-                        <li style = "float: right"><a href="/accounts/logout">Log Out</a></li>
-                    </ul>
+                        <li><a href="/kukacs">KUKCI</a></li>
+                        <li><a href="/new">ADD</a></li>
+                        <li style = "float: right"><a href="/accounts/logout">Sign Out</a></li>
+                    </ul>                        
+
                 {% else %}
                     <ul>
                         <li><a href="/">MUZEJ KUKACA</a></li>
                         <li><a href="/kukacs">KUKCI</a></li>
-                        <li style = "float: right"><a href="/accounts/login">Log In</a></li>
+                        <li style = "float: right"><a href="/accounts/login">Sign In</a></li>
                         <li style = "float: right"><a href="/accounts/signup">Sign Up</a></li>
                     </ul>
                 {% endif %}
