@@ -19,3 +19,8 @@ class SingUpForm(ModelForm):
     class Meta:
         model = Korisnik
         fields = ['username', 'ime', 'prezime', 'email']
+
+class CreateKukac(forms.ModelForm):
+    class Meta:
+        model = Kukac
+        fields = '__all__'
