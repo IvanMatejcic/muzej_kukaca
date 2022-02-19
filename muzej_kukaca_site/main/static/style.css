@@ -40,10 +40,12 @@ input[type=submit]{
   width: 20%;
   height: 30px;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 input[type=submit]:hover{
   background-color: lightgray;
+  cursor: pointer;
 }
   
 .forma{
@@ -124,7 +126,7 @@ label{
 }
 
 .kukac-redirect-to-detail{
-  background-color:black;
+  background-color:rgb(35, 35, 35);
   color: white;
   font-weight: bold;
   border: none;
@@ -140,3 +142,50 @@ label{
   background-color: white;
   color: black;
 }
+
+.kukac-redirect-to-update{
+  background-color:rgb(35, 35, 35);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 20px;
+  margin-left: 25px;
+  margin-right: 360px;
+  text-align: center;
+  display: inline;
+  transition: 0.2s;
+  text-decoration: none;
+  cursor: pointer;
+
+}
+
+.kukac-redirect-to-update:hover{
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+.kukac-redirect-to-delete{
+  background-color:rgb(35, 35, 35);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 20px;
+  margin-left: 5px;
+  margin-right: 25px;
+  text-align: center;
+  display: inline;
+  transition: 0.2s;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.kukac-redirect-to-delete:hover{
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+

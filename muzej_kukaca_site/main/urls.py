@@ -12,4 +12,6 @@ urlpatterns = [
     path('korisnik_list', views.display_korisnik_images, name = 'korisnik_list'),
     url(r'^create/$', views.KukacCreate, name="create"),
     path('kukacs/<int:pk>', views.KukacDetailView.as_view(), name = "kukac-detail"),
+    path('kukacs/<int:pk>/edit', views.KukacUpdateView.as_view(), name= "edit"),
+    path('kukacs/<int:pk>/delete', views.KukacDeleteView.as_view(), name = "delete" )
 ]

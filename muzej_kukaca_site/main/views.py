@@ -1,3 +1,4 @@
+from re import L
 from django.shortcuts import get_object_or_404, redirect, render
 from django.views.generic import ListView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
@@ -16,6 +17,15 @@ class KukacList(ListView):
 class KukacDetailView(DetailView):
     context_object_name = 'obj'
     model = Kukac
+
+class KukacUpdateView(UpdateView):
+    model = Kukac
+    fields = '__all__'
+    success_url = '/kukacs'
+
+class KukacDeleteView(DeleteView):
+   model = Kukac
+   success_url = '/kukacs/'
 
 def homepage(request):
     return render(request, './homepage.html')
