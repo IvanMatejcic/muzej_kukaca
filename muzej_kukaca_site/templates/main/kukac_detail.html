@@ -7,22 +7,23 @@
         <br>
         <h1 class = 'naslov-detail'>{{ obj.vrsta }}</h1><br>
         <div class = "podaci"><h4>Porodica: {{ obj.porodica }}</h4>
-            <h4>Red: {{ obj.red }}<h4>
-            <h4>Datum sakupljanja: {{ obj.datum_sakupljanja }}<h4>
-            <h4>Lokalitet: {{ obj.lokalitet }}<h4>
+            <h4>Opis: {{ obj.opis }}<h4>
             <h4>Duljina: {{ obj.duljina }}<h4>
             <h4>Spol: {{ obj.spol }}<h4>
-            <h4>Dostupan: {{ obj.dostupan }}<h4>
-            <h4>Opis: {{ obj.opis }}<h4>
+            <h4>Red: {{ obj.red }}<h4>
+            <h4>Lokalitet: {{ obj.lokalitet }}<h4>
+            <h4>Datum sakupljanja: {{ obj.datum_sakupljanja }}<h4>
             <h4>Lovac: {{ obj.lovac }}<h4>
         </div>
         <br>
         <div class = "slika_kukca">
-            <img src="{{ obj.slika.url}}" alt="connect" style="max-height:300px">
-        </div><br><br>
-        <a class = "kukac-redirect-to-update">UREDI</a><a class = "kukac-redirect-to-delete">IZBRIŠI</a><br>
-        <br><br>
+            <img src="{{ obj.slika.url}}" alt="connect">
+        </div><br><br><br>
+        {% if user.is_authenticated %}
+            <a class = "kukac-redirect-to-update">UREDI</a><a class = "kukac-redirect-to-delete">IZBRIŠI</a><br>
+            <br><br>
+        {% else %}
+        {% endif %}
     </div>
 </div>
-<br>
 {% endblock %}
