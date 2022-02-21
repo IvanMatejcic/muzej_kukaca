@@ -1,7 +1,3 @@
----
-Autor: Ivan Matejčić
----
-
 # Muzej Kukaca
 
 ## Opis projekta
