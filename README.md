@@ -1,7 +1,7 @@
 # Muzej Kukaca
 
 ## Opis projekta
-"Muzej Kukaca" Je Django projekt kreiran kao završni rad iz kolegija "Programiranje za Web".
+"Muzej Kukaca" je Django projekt kreiran kao završni rad iz kolegija "Programiranje za Web".
 Svrha aplikacije je prikazivanje, dodavanje i uređivanje raznoraznih kukaca od strane korisnika koji ima mogućnost prijave i odjave.
 
 ## Detalji
