@@ -18,7 +18,7 @@
                     <div class = "menu"></div>
                         <li class = "active" style = "float:left;"><a href="/">MUZEJ KUKACA</a></li>
                         <li style = "float:left;"><a href="/kukacs">KUKCI</a></li>
-                        <li style = "float:left;"><a href = "{% url 'main:create' %}">DODAJ</a></li>
+                        <li style = "float:left;"><a href = "/create">DODAJ</a></li>
                         <li style = "float:right;"><a href="/accounts/logout">Sign Out</a></li>
                     </ul>
                     </div>
@@ -54,7 +54,15 @@
     <h1>MUZEJ KUKACA</h1>
     <br>
     <div>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <h2> Opis projekta </h2><br>
+        <p>"Muzej Kukaca" je Django projekt kreiran kao završni rad iz kolegija "Programiranje za Web".
+            Svrha aplikacije je prikazivanje, dodavanje i uređivanje raznoraznih kukaca od strane korisnika koji ima mogućnost prijave i odjave.</p><br><br>
+        <h2> Detalji </h2><br>
+        <p>Projekt je kreiran pomoću jednog modela, Kukac. Klasa sadrži podatke o pojedinom kukcu: vrsta, red, lokalitet, datum dodavanja, duljina, spol, opis i lovac kukca.
+            Korisnik ima mogućnost prijave. Ovo je ostvareno pomoću built-in USER_AUTH_MODEL modela untar Django-a.
+            Korisnik koji nije ulogiran ima mogućnost pregledavanja kukaca i prijave.
+            Korisnik koji je ulogiran ima mogućnost pregledavanja, dodavanja, uređivanja i brisanja kukaca.
+            Korišten je Factory Boy za generičko popunjavanje s nasumičnim 'kukcima' te su i naknadno dodani neki kukci.</p>
     </div>
 </div>
 {% endblock %}
