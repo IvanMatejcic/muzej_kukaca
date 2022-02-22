@@ -7,8 +7,13 @@
     <br>
     <h1> KUKCI </h1>
     <br>
-    <p>Ovo je trenutna kolekcija kukaca u Muzeju Kukaca. Klikom na ime kukca možete saznati više informacija o tom kukcu.  </p>
-    <br>
+    <p>Ovo je trenutna kolekcija kukaca u Muzeju Kukaca.
+       <br>Klikom na ime kukca možete saznati više informacija o tom kukcu.
+       <br> Za dodavanje nasumičnih "kukaca" korišten je Factory Boy.
+       {% if user.is_authenticated%}
+        <br><br> Ulogirani ste. Imate mogućnost dodavanja, uređivanja i brisanja kukaca.
+       {% endif%}
+    </p>
 </div>
 <br>
 {% for kukac in kukac_list %}

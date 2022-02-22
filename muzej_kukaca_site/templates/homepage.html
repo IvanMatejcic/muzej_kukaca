@@ -40,9 +40,7 @@
 <br><br>
    
 {% block content %}
-<br>
-<br>
-
+<br><br>
 <div class = "uvod" style = "width: 600px; margin: 0 auto;">
     <br>
     {% if user.is_authenticated %}
@@ -51,18 +49,17 @@
         <p>Niste prijavljeni.</p>
     {% endif %}
     <br>
-    <h1>MUZEJ KUKACA</h1>
-    <br>
+    <h1 class = "glavniNaslov">MUZEJ KUKACA</h1><br>
     <div>
         <h2> Opis projekta </h2><br>
-        <p>"Muzej Kukaca" je Django projekt kreiran kao završni rad iz kolegija "Programiranje za Web".
+        <p>"Muzej Kukaca" je Django projekt kreiran kao rad za završni ispit iz kolegija "Programiranje za Web".
             Svrha aplikacije je prikazivanje, dodavanje i uređivanje raznoraznih kukaca od strane korisnika koji ima mogućnost prijave i odjave.</p><br><br>
-        <h2> Detalji </h2><br>
-        <p>Projekt je kreiran pomoću jednog modela, Kukac. Klasa sadrži podatke o pojedinom kukcu: vrsta, red, lokalitet, datum dodavanja, duljina, spol, opis i lovac kukca.
-            Korisnik ima mogućnost prijave. Ovo je ostvareno pomoću built-in USER_AUTH_MODEL modela untar Django-a.
-            Korisnik koji nije ulogiran ima mogućnost pregledavanja kukaca i prijave.
-            Korisnik koji je ulogiran ima mogućnost pregledavanja, dodavanja, uređivanja i brisanja kukaca.
-            Korišten je Factory Boy za generičko popunjavanje s nasumičnim 'kukcima' te su i naknadno dodani neki kukci.</p>
+        <h2> Arhitektura </h2><br>
+        <p>Projekt je kreiran koristeći jednan model, <i>Kukac</i>. Model sadrži podatke o kukcu: vrstu, porodicu, red, spol, duljinu, lokalitet, datum sakupljanja, opis, sliku i  korisničko ime lovca kukca.
+            <br>Korisnik ima mogućnost prijave. Ovo je ostvareno pomoću built-in USER_AUTH_MODEL modela untar Django-a.
+            <br>Korisnik koji nije ulogiran ima mogućnost pregledavanja kukaca i prijave.
+            <br>Korisnik koji je ulogiran ima mogućnost pregledavanja, dodavanja, uređivanja i brisanja kukaca.
+            <br>Korišten je Factory Boy za generičko popunjavanje s nasumičnim 'kukcima' te su i naknadno dodani neki kukci.</p>
     </div>
 </div>
 {% endblock %}

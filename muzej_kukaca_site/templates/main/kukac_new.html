@@ -8,7 +8,7 @@
         <br>
         <h1>DODAJ KUKCA</h1>
         <br>
-        <form class="site-form" action="{% url 'main:create' %}" method="post" enctype="multipart/form-data">
+        <form class="site-form" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form }}
             <input type="submit" value="DODAJ">

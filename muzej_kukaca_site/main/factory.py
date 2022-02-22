@@ -16,7 +16,7 @@ class KukacFactory(DjangoModelFactory):
     porodica = factory.Faker("last_name")
     red = factory.Faker("pyint", min_value = 0, max_value = 20)
     spol = factory.Iterator([Kukac.GENDER_MALE, Kukac.GENDER_FEMALE])
-    duljina = factory.Faker("pyint", min_value = 1, max_value = 10000)
+    duljina = factory.Faker("pyint", min_value = 0, max_value = 50)
     lokalitet = factory.Faker("city")
     datum_sakupljanja = factory.Faker("date_time")
     opis = factory.Faker("paragraph")

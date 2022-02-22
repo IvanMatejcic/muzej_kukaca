@@ -8,7 +8,7 @@ class Kukac(models.Model):
     porodica = models.CharField(max_length = 100)
     red = models.CharField(max_length = 100)
     spol = models.CharField(max_length = 1)
-    duljina = models.CharField(max_length = 20)
+    duljina = models.CharField(max_length = 2)
     lokalitet = models.CharField(max_length = 100)
     datum_sakupljanja = models.DateTimeField(blank=True, null=True)    
     opis = models.TextField()

@@ -11,9 +11,10 @@ class KukacDetailView(DetailView):
     model = Kukac
 
 class KukacCreateView(CreateView):
-    form_class = forms.CreateKukac
     model = Kukac
-    success_url = '/kukacs'
+    fields = '__all__'
+    template_name = 'main/kukac_new.html'
+    success_url = 'kukacs/'
 
 class KukacUpdateView(UpdateView):
     model = Kukac
