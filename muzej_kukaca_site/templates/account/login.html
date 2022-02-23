@@ -1,0 +1,40 @@
+{% extends "homepage.html" %}
+
+{% block content %}
+<br><br>
+<div class = "signup" style ="margin: 0 auto; width: 600px;">
+    <br>
+    <h1>LOG IN </h1><br>
+    {% if form.errors %}
+    <p>Your username and password didn't match. Please try again.</p>
+    {% endif %}
+
+    {% if next %}
+        {% if user.is_authenticated %}
+        <p>Your account doesn't have access to this page. To proceed,
+        please login with an account that has access.</p>
+        {% else %}
+        <p>Please login to see this page.</p>
+        {% endif %}
+    {% endif %}
+
+    <form class = "signup-form" method="post">
+        {% csrf_token %}
+        {% for field in form %}
+          <p>
+            {{ field.label_tag }}&nbsp;&nbsp;   
+            {{ field }}
+            {% if field.help_text %}
+              <small style="color: white">{{ field.help_text }}</small>
+            {% endif %}
+            {% for error in field.errors %}
+              <p style="color: red">{{ error }}</p>
+            {% endfor %}
+          </p>
+        {% endfor %}
+        <br>
+        <button type="submit">SIGN IN</button>
+      </form>
+</div>
+
+{% endblock %}

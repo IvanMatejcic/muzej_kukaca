@@ -42,6 +42,7 @@ input[type=submit]{
   height: 30px;
   border-radius: 5px;
   cursor: pointer;
+  transition: 0.2s;
 }
 
 input[type=submit]:hover{
@@ -97,12 +98,12 @@ h3{
 }
 
 .site-form input, textarea{
-  display: block;
   margin: 20px 0;
   padding: 5px;
   border-radius: 5px;
   border: none;
 }
+
 
 label{
   display: inline;
@@ -178,4 +179,54 @@ label{
 
 .glavniNaslov{
   font-size: 42px;
+}
+
+button{
+  background-color:rgb(38, 38, 38);
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  width: 30%;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover{
+  background-color: white;
+  color:rgb(38, 38, 38);
+  cursor: pointer;
+}
+
+.signup-form input, textarea{
+  margin: 20px 0;
+  padding: 7px;
+  border-radius: 5px;
+  border: 1px solid black;
+  transition: 0.2s;
+}
+
+.signup-form input:hover{
+  border: 1px solid red;
+}
+
+.signup{
+  background-color: rgb(22, 22, 22);
+  color: white;
+  border-radius: 10px;
+  padding: 30px;
+  padding-top: 5px;
+  text-align: center;
+}
+
+.kukci-new{
+  background-color: rgb(22, 22, 22);
+  border-radius: 10px;
+  padding: 20px;
+  padding-top: 5px;
+  color: white;
+  display: inherit;
+  text-align: center;
 }
