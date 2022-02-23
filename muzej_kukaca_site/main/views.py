@@ -14,7 +14,7 @@ class KukacCreateView(CreateView):
     model = Kukac
     fields = '__all__'
     template_name = 'main/kukac_new.html'
-    success_url = 'kukacs/'
+    success_url = '/kukacs'
 
 class KukacUpdateView(UpdateView):
     model = Kukac
