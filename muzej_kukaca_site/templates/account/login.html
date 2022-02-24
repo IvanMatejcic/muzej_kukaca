@@ -5,6 +5,7 @@
 <div class = "signup" style ="margin: 0 auto; width: 600px;">
     <br>
     <h1>SIGN IN </h1><br>
+    <br><p>Prijavite se. Ukoliko niste korisnik, &nbsp;<a class = "eksterna-prijava" href = "/accounts/signup">kreirajte novi račun.</a></p><br>
     {% if form.errors %}
     <p>Your username and password didn't match. Please try again.</p>
     {% endif %}
@@ -20,10 +21,9 @@
 
     <form class = "signup-form" method="post">
         {% csrf_token %}
-        {% for field in form %}
+        <table>
           <p>
-            {{ field.label_tag }}&nbsp;&nbsp;   
-            {{ field }}
+            {{form.as_table}}
             {% if field.help_text %}
               <small style="color: white">{{ field.help_text }}</small>
             {% endif %}
@@ -31,8 +31,8 @@
               <p style="color: red">{{ error }}</p>
             {% endfor %}
           </p>
-        {% endfor %}
-        <br>
+        </table>
+        <br><br>
         <button type="submit">SIGN IN</button>
       </form>
 </div>

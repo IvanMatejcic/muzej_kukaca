@@ -74,7 +74,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'muzej_kukaca_site.wsgi.application'
+#WSGI_APPLICATION = 'muzej_kukaca_site.wsgi.application'
 
 
 # Database

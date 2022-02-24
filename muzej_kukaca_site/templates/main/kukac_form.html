@@ -6,19 +6,18 @@
         <br><h1>UREDI KUKCA</h1><br>
         <form class="site-form" method="post" enctype="multipart/form-data">
             {% csrf_token %}
-            {% for field in form %}
-            <p>
-                {{ field.label_tag }}&nbsp;&nbsp;   
-                {{ field }}
-                {% if field.help_text %}
-                <small style="color: white">{{ field.help_text }}</small>
-                {% endif %}
-                {% for error in field.errors %}
-                <p style="color: red">{{ error }}</p>
-                {% endfor %}
-            </p>
-            {% endfor %}
-        <br>
+            <table>
+                <p>
+                  {{form.as_table}}
+                  {% if field.help_text %}
+                    <small style="color: white">{{ field.help_text }}</small>
+                  {% endif %}
+                  {% for error in field.errors %}
+                    <p style="color: red">{{ error }}</p>
+                  {% endfor %}
+                </p>
+              </table>
+        <br><br><br>
             <button type="submit">SPREMI</button>
         </form>
     </div>

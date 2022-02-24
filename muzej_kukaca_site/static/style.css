@@ -34,19 +34,24 @@ li a:hover {
 }
 
 input[type=submit]{
-  background-color:white;
-  color: rgb(19, 19, 19);
+  background-color:rgb(38, 38, 38);
+  color: white;
   font-weight: bold;
   border: none;
-  width: 20%;
-  height: 30px;
   border-radius: 5px;
-  cursor: pointer;
+  padding: 20px;
+  margin-left: 5px;
+  margin-right: 25px;
+  text-align: center;
+  display: inline;
   transition: 0.2s;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 input[type=submit]:hover{
   background-color: lightgray;
+  color: black;
   cursor: pointer;
 }
   
@@ -219,11 +224,33 @@ button:hover{
   text-align: center;
 }
 
+table{
+  display: inline;
+}
+
 .kukci-new{
   background-color: rgb(22, 22, 22);
   border-radius: 10px;
   padding: 20px;
   padding-top: 5px;
   color: white;
+  display: inherit;
   text-align: center;
+}
+
+.eksterna-prijava{
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  width: 30%;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+  text-decoration: none;
+}
+
+.eksterna-prijava:hover{
+  color: red;
 }
