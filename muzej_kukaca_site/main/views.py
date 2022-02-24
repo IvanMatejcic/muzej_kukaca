@@ -2,6 +2,8 @@ from . import forms
 from .models import Kukac
 from django.shortcuts import render
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView, DetailView
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 class KukacList(ListView):
     model = Kukac
@@ -10,20 +12,26 @@ class KukacDetailView(DetailView):
     context_object_name = 'obj'
     model = Kukac
 
-class KukacCreateView(CreateView):
+class KukacCreateView(LoginRequiredMixin, CreateView):
     model = Kukac
     fields = '__all__'
     template_name = 'main/kukac_new.html'
     success_url = '/kukacs'
+    login_url = '/accounts/login/'
 
-class KukacUpdateView(UpdateView):
+
+class KukacUpdateView(LoginRequiredMixin, UpdateView):
     model = Kukac
     fields = '__all__'
     success_url = '/kukacs'
+    login_url = '/accounts/login/'
 
-class KukacDeleteView(DeleteView):
+
+class KukacDeleteView(LoginRequiredMixin, DeleteView):
    model = Kukac
    success_url = '/kukacs'
+   login_url = '/accounts/login/'
+
 
 def homepage(request):
     return render(request, './homepage.html')

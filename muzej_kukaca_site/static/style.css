@@ -104,7 +104,6 @@ h3{
   border: none;
 }
 
-
 label{
   display: inline;
   margin: 40px 0 0;
@@ -146,7 +145,6 @@ label{
   transition: 0.2s;
   text-decoration: none;
   cursor: pointer;
-
 }
 
 .kukac-redirect-to-update:hover{
@@ -227,6 +225,5 @@ button:hover{
   padding: 20px;
   padding-top: 5px;
   color: white;
-  display: inherit;
   text-align: center;
 }
