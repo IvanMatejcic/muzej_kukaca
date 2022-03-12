@@ -10,5 +10,5 @@ Klasa sadrži podatke o pojedinom kukcu: vrsta, red, lokalitet, datum dodavanja,
 Korisnik ima mogućnost prijave. Ovo je ostvareno pomoću built-in USER_AUTH_MODEL modela untar Django-a.
 Korisnik koji nije ulogiran ima mogućnost pregledavanja kukaca i prijave.
 Korisnik koji je ulogiran ima mogućnost pregledavanja, dodavanja, uređivanja i brisanja kukaca.
-Korišten je Factory Boy za generičko popunjavanje s nasumičnim 'kukcima' te su i naknadno dodani neki kukci.
+Korišten je Factory Boy za generičko popunjavanje s nasumičnim 'kukcima' te su i naknadno dodani neki kukci..
 
